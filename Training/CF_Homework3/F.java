@@ -23,6 +23,8 @@ import java.util.*;
     (2). Check if this min is a subset of all other numbers in a, if not or there is only 1 such min, the answer is 0;
     (3). For the required condition to hold, we must have the first and last number as min, the order of the rest n - 2 numbers in between
          do not matter. The answer is minVCnt * (minVCnt - 1) * (n - 2)!
+         
+     Pitfall: if you use int type for minVCnt, minVCnt * (minVCnt - 1) may cause integer overflow so use long!
  */
 
 public class F {
